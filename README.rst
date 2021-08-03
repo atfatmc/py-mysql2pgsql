@@ -3,7 +3,7 @@ py-mysql2pgsql - A tool for migrating/converting/exporting data from MySQL to Po
 ========================================================================================
 
 This tool allows you to take data from an MySQL server (only tested on
-5.x) and write a PostgresSQL compatable (8.2 or higher) dump file or pipe it directly
+5.x) and write a PostgresSQL compatible (8.2 or higher) dump file or pipe it directly
 into your running PostgreSQL server (8.2 or higher).
 
 .. attention::
@@ -148,7 +148,7 @@ to edit. For the impatient, here is what the file contains.
     # if index_prefix is given, indexes will be created whith a name prefixed with index_prefix
     index_prefix:
 
-Pretty self explainitory right? A couple things to note, first if
+Pretty self explanatory right? A couple things to note, first if
 `destination -> file` is populated all output will be dumped to the
 specified location regardless of what is contained in `destination ->
 postgres`. So if you want to dump directly to your server make sure
@@ -172,7 +172,7 @@ sequences out of whack. When this happens, you may get IntegrityErrors
 about your primary keys saying things like, "duplicate key value violates 
 unique constraint." See `this page <https://wiki.postgresql.org/wiki/Fixing_Sequences>`_ for a fix
 
-Due to different naming conventions in mysql an postgrsql, there is a chance
+Due to different naming conventions in mysql an postgresql, there is a chance
 that the tool generates index names that collide with table names. This can
 be circumvented by setting index_prefix.
 
@@ -267,7 +267,7 @@ Not just any valid MySQL database schema can be simply converted to the
 PostgreSQL. So when you end with a different database schema please note that:
 
 * Most MySQL versions don't enforce `NOT NULL` constraint on `date` and `enum`
-  feilds. Because of that `NOT NULL` is skipped for this types. Here's an
+  fields. Because of that `NOT NULL` is skipped for this types. Here's an
   excuse for the dates: `<http://bugs.mysql.com/bug.php?id=59526>`_.
 
 About:
